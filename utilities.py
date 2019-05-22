@@ -20,7 +20,7 @@ functions = {
 def problem_to_solve(number):
 
   # Search the function in the dictionnary
-  func = functions.get(number, lambda: "No function found.")
+  func = functions.get(number, lambda: "Aucun problème sélectionné.")
 
   # Execute the function if founded
   func()
