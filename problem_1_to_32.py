@@ -55,3 +55,38 @@ def problem_2():
     
 # -----------------------------------------------------------------------------------------------
 # ===============================================================================================
+
+# Problème no 3 :
+# ---------------
+# Quel est le plus grand facteur premier du nombre x ?
+def problem_3():
+  print("\nVous avez sélectionné le problème suivant :")
+  print("-----------------------------------")
+  print("Quel est le plus grand facteur premier du nombre x ?")
+  print("===================================\n")
+
+  # Return a correct input
+  number = utilities.check_input("Veuillez entrer le nombre dont vous voulez trouver les facteurs premiers : ")
+  
+  # List of all the prime numbers found in the range max divided by 2
+  prime_numbers = utilities.list_prime_numbers(number//2)
+  
+  # List for the prime factors that will be found
+  prime_factors = []
+
+  # Loop to check all the prime factors
+  for prime in prime_numbers:
+    while number%prime == 0:
+      number //= prime
+      prime_factors.append(prime)
+  
+  # If no prime factor, the number entered is its own
+  if len(prime_factors) == 0:
+    prime_factors.append(number)
+
+  print("\nVoici la liste des facteurs premiers pour le nombre renseigné : ", prime_factors)
+  print("\nVoici le plus grand facteur premier pour le nombre renseigné : {}".format(max(prime_factors)))
+  print("===================================\n")
+
+# -----------------------------------------------------------------------------------------------
+# ===============================================================================================
