@@ -90,3 +90,37 @@ def problem_3():
 
 # -----------------------------------------------------------------------------------------------
 # ===============================================================================================
+
+
+# Problème no 4 :
+# ---------------
+# Quel est le plus grand palindrome que l'on peut obtenir en multipliant un nombre de x chiffres avec un nombre de y chiffres ?
+def problem_4():
+  print("\nVous avez sélectionné le problème suivant :")
+  print("-----------------------------------")
+  print("Quel est le plus grand palindrome que l'on peut obtenir en multipliant un nombre de x chiffres avec un nombre de y chiffres ?")
+  print("===================================\n")
+  
+  digit1 = utilities.check_input("Veuillez entrer le premier nombre de chiffres : ")
+  digit2 = utilities.check_input("Veuillez entrer le deuxième nombre de chiffres : ")
+
+  # Get the greatest number in the range of the digit (example : if digit = 3, max = 999)
+  greatest1 = utilities.greatest_number(digit1)
+  greatest2 = utilities.greatest_number(digit2)
+
+  palindrome = 0
+
+  # Multiplication till a palindrome is found
+  for number1 in range(greatest1, -1, -1):
+    for number2 in range(greatest2, -1, -1):
+      resultat = number1*number2
+
+      # Check if it's a palindrome
+      if(utilities.is_palindrome(resultat)):
+        if(resultat > palindrome):
+          palindrome = resultat
+
+  print("Le nombre suivant est un palindrome : {}".format(palindrome))
+
+# -----------------------------------------------------------------------------------------------
+# ===============================================================================================

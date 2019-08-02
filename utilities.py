@@ -10,14 +10,16 @@ import problem_1_to_32
 problems = [
   "1) Trouver la somme de tous les multiples de 5 ou 7 inférieurs à x",
   "2) En prenant en compte les termes de la suite de Fibonacci dont les valeurs ne dépassent pas x, trouver la somme des termes impairs",
-  "3) Quel est le plus grand facteur premier du nombre x ?"
+  "3) Quel est le plus grand facteur premier du nombre x ?",
+  "4) Quel est le plus grand palindrome que l'on peut obtenir en multipliant un nombre de x chiffres avec un nombre de y chiffres ?"
 ]
 
 # Dictionnary containing all functions
 functions = {
   1: problem_1_to_32.problem_1,
   2: problem_1_to_32.problem_2,
-  3: problem_1_to_32.problem_3
+  3: problem_1_to_32.problem_3,
+  4: problem_1_to_32.problem_4
 }
 
 # Function to search the correct function for the problem asked
@@ -50,7 +52,7 @@ def check_input(text):
 def list_prime_numbers(max):
   prime_numbers = []
 
-  for prime in range(2, (max//2)+1):
+  for prime in range(2, (max)+1):
     isPrime = True
     for num in range(2, int(prime ** 0.5) + 1):
       if prime % num == 0:
@@ -61,3 +63,16 @@ def list_prime_numbers(max):
       prime_numbers.append(prime)  
 
   return prime_numbers
+
+# Function to find the greatest number in the range 
+def greatest_number(digit):
+  max = "9" * digit
+  
+  return int(max)
+
+# Function to check if it's a palindrome
+def is_palindrome(palindrome):
+  number = str(palindrome)
+  reversed = number[::-1]
+  return number == reversed
+
