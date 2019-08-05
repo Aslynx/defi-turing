@@ -4,6 +4,7 @@
 
 # Imported module
 import utilities
+import math
 
 # Problème no 1 :
 # ---------------
@@ -124,3 +125,35 @@ def problem_4():
 
 # -----------------------------------------------------------------------------------------------
 # ===============================================================================================
+
+# Problème no 5 :
+# ---------------
+# Que vaut la somme des chiffres composant le nombre x^y ?
+def problem_5():
+  print("\nVous avez sélectionné le problème suivant :")
+  print("-----------------------------------")
+  print("Que vaut la somme des chiffres composant le nombre x^y ?")
+  print("===================================\n")
+  
+  number = utilities.check_input("Veuillez entrer le nombre que vous voulez : ")
+  exponent = utilities.check_input("Veuillez entrer l'exposant que vous voulez : ")
+
+  # Get pow result from the two inputs
+  pow_result = str(pow(number, exponent))
+
+  print(pow_result)
+
+  # Create the variable for the sum
+  pow_sum = 0.0
+
+  for x in pow_result:
+    if x != '.':
+      pow_sum += int(x) 
+
+
+  print("\nLa somme des chiffres composant le nombre {}^{} est égale à {}".format(number, exponent, pow_sum))
+  print("===================================\n")
+
+# -----------------------------------------------------------------------------------------------
+# ===============================================================================================
+
