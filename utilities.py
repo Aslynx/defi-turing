@@ -13,7 +13,8 @@ problems = [
   "2) En prenant en compte les termes de la suite de Fibonacci dont les valeurs ne dépassent pas x, trouver la somme des termes impairs",
   "3) Quel est le plus grand facteur premier du nombre x ?",
   "4) Quel est le plus grand palindrome que l'on peut obtenir en multipliant un nombre de x chiffres avec un nombre de y chiffres ?",
-  "5) Que vaut la somme des chiffres composant le nombre x^y ?"
+  "5) Que vaut la somme des chiffres composant le nombre x^y ?",
+  "6) Trouver la somme des chiffres du nombre x! ?"
 ]
 
 # Dictionnary containing all functions
@@ -22,7 +23,8 @@ functions = {
   2: problem_1_to_32.problem_2,
   3: problem_1_to_32.problem_3,
   4: problem_1_to_32.problem_4,
-  5: problem_1_to_32.problem_5
+  5: problem_1_to_32.problem_5,
+  6: problem_1_to_32.problem_6
 }
 
 # Function to search the correct function for the problem asked

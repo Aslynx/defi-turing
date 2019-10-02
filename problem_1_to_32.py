@@ -141,8 +141,6 @@ def problem_5():
   # Get pow result from the two inputs
   pow_result = str(pow(number, exponent))
 
-  print(pow_result)
-
   # Create the variable for the sum
   pow_sum = 0.0
 
@@ -157,3 +155,30 @@ def problem_5():
 # -----------------------------------------------------------------------------------------------
 # ===============================================================================================
 
+# Problème no 6 :
+# ---------------
+# Trouver la somme des chiffres du nombre x! ?
+def problem_6():
+  print("\nVous avez sélectionné le problème suivant :")
+  print("-----------------------------------")
+  print("Trouver la somme des chiffres du nombre x! ?")
+  print("===================================\n")
+  
+  number = utilities.check_input("Veuillez entrer le nombre à factorieliser : ")
+
+  # Get pow result from the two inputs
+  factorial_result = str(utilities.factorial(number))
+
+  # Create the variable for the sum
+  factorial_sum = 0.0
+
+  for x in factorial_result:
+    if x != '.':
+      factorial_sum += int(x) 
+
+
+  print("\nLa somme des chiffres composant le nombre {}! est égale à {}".format(number, factorial_sum))
+  print("===================================\n")
+
+# -----------------------------------------------------------------------------------------------
+# ===============================================================================================
